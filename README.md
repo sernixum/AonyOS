@@ -46,4 +46,4 @@ Then open `http://localhost:8000` in your browser.
 
 - This project is a front-end browser demo and uses simulated OS behavior.
 - The main files are `index.html`, `styles.css`, and `script.js`.
-- No backend is required; everything runs in the browser.
+- No backend is required btw, everything runs in the browser.
