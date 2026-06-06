@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Auk Saurian</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="desktop">
+    <div class="wallpaper"></div>
+
+    <div id="topbar">
+      <div class="topbar-left">Auk Saurian</div>
+      <div class="topbar-right"><span id="topbar-clock">00:00</span></div>
+    </div>
+
+    <div id="bootloader" class="boot-overlay">
+      <div class="boot-content">
+        <div class="boot-screen">
+          <div class="boot-logo">FINIT 6.2</div>
+          <div class="boot-message">Tails bootloader-like menu</div>
+          <div class="boot-entries">
+            <button class="boot-entry selected" data-target="auk">Auk Saurian</button>
+            <button class="boot-entry" data-target="recovery">Auk Recovery Mode</button>
+          </div>
+          <div class="boot-legend">Use ↑/↓ to move, Enter to boot</div>
+        </div>
+        <div class="boot-progress-wrapper hidden">
+          <div class="boot-progress">
+            <div class="boot-progress-bar"></div>
+          </div>
+          <div class="boot-progress-text">Booting Auk Saurian...</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="desktop-icons">
+      <button class="desktop-icon" data-app="files" style="left: 32px; top: 42px;">
+        <span class="app-icon">🗂</span>
+        <span class="icon-label">Files</span>
+      </button>
+      <button class="desktop-icon" data-app="browser" style="left: 172px; top: 42px;">
+        <span class="app-icon">🌐</span>
+        <span class="icon-label">Browser</span>
+      </button>
+      <button class="desktop-icon" data-app="terminal" style="left: 32px; top: 172px;">
+        <span class="app-icon">🖥️</span>
+        <span class="icon-label">Terminal</span>
+      </button>
+      <button class="desktop-icon" data-app="settings" style="left: 172px; top: 172px;">
+        <span class="app-icon">⚙️</span>
+        <span class="icon-label">Settings</span>
+      </button>
+      <button class="desktop-icon" data-app="blm" style="left: 32px; top: 302px;">
+        <span class="app-icon">📦</span>
+        <span class="icon-label">BLM</span>
+      </button>
+    </div>
+
+    <div id="windows"></div>
+
+    <div id="start-menu" class="hidden">
+      <div class="start-menu-search">
+        <input type="search" id="start-search" placeholder="Search apps..." />
+      </div>
+      <div class="start-menu-apps">
+        <button class="start-app" data-app="terminal"><span class="app-icon">⌨️</span>Auk Terminal</button>
+        <button class="start-app" data-app="browser"><span class="app-icon">🌐</span>Auk Browser</button>
+        <button class="start-app" data-app="files"><span class="app-icon">🗂</span>Auk Files</button>
+        <button class="start-app" data-app="settings"><span class="app-icon">⚙️</span>Auk Settings</button>
+        <button class="start-app" data-app="blm"><span class="app-icon">📦</span>BLM Package Manager</button>
+      </div>
+    </div>
+
+    <div id="panel">
+      <button id="start-button">Start ▾</button>
+      <div id="quick-launch">
+        <button class="panel-icon" data-app="terminal" title="Terminal">⌨️</button>
+        <button class="panel-icon" data-app="browser" title="Browser">🌐</button>
+        <button class="panel-icon" data-app="files" title="Files">🗂</button>
+      </div>
+      <div id="workspace-switcher" aria-label="Workspaces">
+        <button class="ws" data-ws="1">1</button>
+        <button class="ws" data-ws="2">2</button>
+        <button class="ws" data-ws="3">3</button>
+      </div>
+      <div id="taskbar"></div>
+      <div id="panel-right">
+        <span id="workspace-label">Workspace</span>
+        <span id="clock"></span>
+      </div>
+    </div>
+  </div>
+
+  <template id="window-template">
+    <div class="window">
+      <div class="window-header">
+        <div class="window-controls">
+          <button class="window-button close-window">✕</button>
+          <button class="window-button minimize-window">━</button>
+          <button class="window-button maximize-window">▢</button>
+        </div>
+        <span class="window-title"></span>
+      </div>
+      <div class="window-content"></div>
+      <div class="resize-handle" title="Resize"></div>
+    </div>
+  </template>
+
+  <script src="script.js"></script>
+  <div id="desktop-context" class="hidden">
+    <ul>
+      <li id="ctx-refresh">Refresh</li>
+      <li id="ctx-toggle-wallpaper">Toggle Wallpaper</li>
+      <li id="ctx-reboot">Reboot (FINIT)</li>
+    </ul>
+  </div>
+</body>
+</html>
