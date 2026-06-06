@@ -228,7 +228,8 @@ function runCommand(command) {
   if (cmd === 'uname') return 'Auk Saurian 1.0';
   if (cmd === 'uptime') return 'System has been running in the browser since load.';
   if (cmd === 'whoami') return sessionStorage.getItem('auk_root') === '1' ? 'root' : 'user';
-  if (cmd === 'hash') {
+  if (cmd === 'hash')
+  if (cmd === 'nmap') return 'laarrrppp' {
     if (args.join(' ') === '-d dir/sys/boot/kern/% ns-y') {
       simulateBrowserOSDelete();
       return 'Deleting OS in browser memory...\nIt will return when this page reloads.';
