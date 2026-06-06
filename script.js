@@ -17,7 +17,7 @@ const desktopContext = document.getElementById('desktop-context');
 const apps = {
   terminal: {
     icon: '🖥️',
-    title: 'Auk Terminal',
+    title: 'Konsole',
     render: () => {
       const container = document.createElement('div');
       container.className = 'terminal';
@@ -134,7 +134,7 @@ const apps = {
   },
   settings: {
     icon: '⚙️',
-    title: 'Auk Settings',
+    title: 'ettings',
     render: () => {
       const container = document.createElement('div');
       container.className = 'settings-panel';
@@ -152,7 +152,7 @@ const apps = {
   ,
   blm: {
     icon: '📦',
-    title: 'BLM Package Manager',
+    title: 'bloom packager',
     render: () => {
       const container = document.createElement('div');
       container.className = 'blm-manager';
